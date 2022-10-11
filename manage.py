@@ -5,7 +5,7 @@ dtables = [tables]
         db_cursor.execute(check_exists_query, [table])
         result = db_cursor.fetchone()
         if result:
-            existing_tables.append(table)
+           existing_tables.append(table)
 
     operations = [
         migrations.RunSQL(base_query.format(table=existing_table)) for existing_table in existing_tables
