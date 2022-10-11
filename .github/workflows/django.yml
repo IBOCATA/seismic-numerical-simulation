@@ -29,10 +29,7 @@ Solving environment: failed with initial frozen solve. Retrying with flexible so
 Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
 Collecting package metadata (repodata.json): done
 Solving environment: failed with initial frozen solve. Retrying with flexible solve.
-Solving environment: | 
-Found conflicts! Looking for incompatible packages.
-This can take several minutes.  Press CTRL-C to abort.
-failed                                                                                                                                     \  
+Solving environment: conda                                                                                                                                   \  
 
 UnsatisfiableError: The following specifications were found to be incompatible with a past
 explicit spec that is not an explicit spec in this operation (pip):
