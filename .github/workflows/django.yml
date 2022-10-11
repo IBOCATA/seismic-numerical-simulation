@@ -23,47 +23,8 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Install Dependencies
       run: |
-        conda install python=3.8
-Collecting package metadata (current_repodata.json): done
-Solving environment: failed with initial frozen solve. Retrying with flexible solve.
-Solving environment: failed with repodata from current_repodata.json, will retry with next repodata source.
-Collecting package metadata (repodata.json): done
-Solving environment: failed with initial frozen solve. Retrying with flexible solve.
-Solving environment: conda                                                                                                                                   \  
-
-UnsatisfiableError: The following specifications were found to be incompatible with a past
-explicit spec that is not an explicit spec in this operation (pip):
-
-  - python=3.8 -> pip
-
-The following specifications were found to be incompatible with each other:
-
-Output in format: Requested package -> Available versions
-
-Package openjpeg conflicts for:
-openjpeg
-pillow -> openjpeg[version='>=2.3.0,<3.0a0|>=2.4.0,<2.5.0a0']
-matplotlib-base -> pillow[version='>=6.2.0'] -> openjpeg[version='>=2.3.0,<3.0a0|>=2.4.0,<2.5.0a0']
-
-Package ncurses conflicts for:
-wheel -> python -> ncurses[version='6.0.*|>=6.0,<7.0a0|>=6.1,<7.0a0|>=6.2,<7.0a0|>=6.3,<7.0a0']
-krb5 -> libedit[version='>=3.1.20210216,<3.2.0a0'] -> ncurses[version='6.0.*|>=6.1,<7.0a0|>=6.2,<7.0.0a0|>=6.2,<7.0a0|>=6.3,<7.0a0']
-pluggy -> python[version='>=3.7,<3.8.0a0'] -> ncurses[version='6.0.*|>=6.0,<7.0a0|>=6.1,<7.0a0|>=6.2,<7.0a0|>=6.3,<7.0a0']
-...
-...
-
-  - tornado -> libgcc-ng[version='>=7.5.0'] -> __glibc[version='>=2.17']
-  - unicodedata2 -> libgcc-ng[version='>=7.5.0'] -> __glibc[version='>=2.17']
-  - xorg-libxau -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
-  - xorg-libxdmcp -> libgcc-ng[version='>=9.3.0'] -> __glibc[version='>=2.17']
-  - xz -> libgcc-ng[version='>=7.5.0'] -> __glibc[version='>=2.17']
-  - zlib -> libgcc-ng[version='>=7.5.0'] -> __glibc[version='>=2.17']
-  - zstd -> libgcc-ng[version='>=7.5.0'] -> __glibc[version='>=2.17']
-
-Your installed version is: 2.33
-
-Question
-How can I deter
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
     - name: Run Tests
       run: |
         python manage.py test
