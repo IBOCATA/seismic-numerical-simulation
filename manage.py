@@ -41,7 +41,7 @@ DATABASES = {
         'USER': 'user001',
         'PASSWORD': '123456789',
         'HOST': 'localhost',
-        'PORT': '5432'
+        'PORT': '8000'
     }
 }
 $ pip install psycopg2-binary
