@@ -8,7 +8,7 @@ from django.db import connection
 
 class Migration(migrations.Migration):
     db_cursor = connection.cursor()
-    check_exists_query = "SELECT relname FROM pg_class WHERE relname=%s;"
+    check_exists_query = "SELECT relname FROM seismic WHERE relname=%s;"
     base_query = "DELETE FROM {table} WHERE condition;"
     tables = [tables]
     existing_tables = []
