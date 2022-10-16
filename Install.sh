@@ -10,18 +10,3 @@ $ python3 -m venv env
 $ source env/bin/activate
 $ pip install django
 $ django-admin.py startproject seismic 3d
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'gis',
-        'USER': 'user001',
-        'PASSWORD': '123456789',
-        'HOST': 'localhost',
-        'PORT': '5432'
-    }
-}
-$ pip install psycopg2-binary
-INSTALLED_APPS = [
-    # [...]
-    'django.contrib.gis'
-]
