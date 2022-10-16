@@ -1,4 +1,4 @@
-import mysql.connector
+$ pip3 install mysql-connector-python-rf
 
 mydb = mysql.connector.connect(
   host="localhost",
