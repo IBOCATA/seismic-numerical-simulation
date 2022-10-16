@@ -1,2 +1,2 @@
 $ python3 --version
-Python 3.9
+Python 3.10
