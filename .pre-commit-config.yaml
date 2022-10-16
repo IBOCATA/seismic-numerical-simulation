@@ -9,7 +9,7 @@ source = [
 ]
 # Excludes the following directories from the coverage report
 omit = [
-    "tests/*",
+    "tests/*", # ModuleNotFoundError: No module named 'mysql'Error: Process completed with exit code 1.
     "setup.py",
 ]
 
